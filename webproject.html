@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="tabs">
+            <li class="tab" onclick="openTab(event, 'tracker')">Tracker</li>
+            <li class="tab" onclick="openTab(event, 'history')">History</li>
+            <li class="tab" onclick="openTab(event, 'analysis')">Analysis</li>
+            <li class="tab" onclick="openTab(event, 'bills')">Bills</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+         <div id="tracker" class="tabcontent">
+            <img src="C:\Users\ASUS\Downloads\budgettracker_toe.png" class="image">
+            <div class="container">
+                <div class="input-section">
+                    <input type="text" id="income-description" placeholder="Income description" class="ip">
+                    <input type="number" id="income-amount" placeholder="Amount" class="ip">
+                    <select id="income-category">
+                        <option value="Salary">Salary</option>
+                        <option value="Freelance">Freelance</option>
+                        <option value="Investments">Investments</option>
+                        
+                    </select>
+                    <button onclick="addIncome()">Add Income</button>
+                </div>
+                <div class="input-section">
+                    <input type="text" id="expense-description" placeholder="Expense description" class="red">
+                    <input type="number" id="expense-amount" placeholder="Amount"
+                    class="red">
+                    <select id="expense-category">
+                        <option value="Groceries">Groceries</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="food">Food</option>      
+                    </select>
+                    <button onclick="addExpense()">Add Expense</button>
+                </div>
+                <div class="incomes" id="incomes-list">
+                    <h2>Incomes</h2>
+                    
+                </div>
+                <div class="expenses" id="expenses-list">
+                    <h2>Expenses</h2>
+                    
+                </div>
+                <div>Total Incomes: ₹<span id="total-incomes">0</span></div>
+                <div>Total Expenses: ₹<span id="total-expenses">0</span></div>
+                <div>Total Balance: ₹<span id="total-balance">0</span></div>
+            </div>
+
+            <div>
+                <label for="monthly-budget">Monthly Budget: ₹</label>
+                <input type="number" id="monthly-budget" placeholder="Enter monthly budget" oninput="setMonthlyBudget()">
+            </div>
+            <div>Daily Spending Limit: ₹<span id="daily-limit">0.00</span></div>
+        </div>
+        <div id="history" class="tabcontent">
+            <h1>Income and Expense History</h1>
+            <div id="history-content"></div>
+        </div>
+        <div id="analysis" class="tabcontent">
+            <h1>Analysis</h1>
+            <img src="C:\Users\ASUS\Pictures\Screenshots\Screenshot 2024-03-18 140650.png">
+            <img src="C:\Users\ASUS\Pictures\Screenshots\Screenshot 2024-03-18 140724.png">
+        </div>
+        <div id="bills" class="tabcontent">
+            <h1>Bills</h1>
+            <div class="input-section">
+                <input type="text" id="bill-description" placeholder="Bill description">
+                <input type="number" id="bill-amount" placeholder="Amount">
+                <input type="date" id="bill-due-date">
+                
+                <button onclick="addBill()">Add Bill</button>
+            </div>
+            <div id="reminders"></div>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

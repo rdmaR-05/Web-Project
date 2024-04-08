@@ -1,0 +1,218 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.image{
+    margin-left: 180px;
+}
+.ip{
+    color: green;
+    font-weight: bolder;
+}
+.red{
+    color: red;
+    font: bold;
+    font-weight: bolder;
+    
+}
+
+body {
+    background-image: url('Designer.png');
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.tab:hover {
+    background-color: #0056b3;
+}
+
+.tab.active {
+    background-color: #004999;
+}
+
+.tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.tab.active::after {
+    width: calc(100% - 40px);
+}
+
+.input-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-section input[type="text"],
+.input-section input[type="number"],
+.input-section select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
+
+.expense, .income {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.expense span, .income span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#total-expenses, #total-incomes, #total-balance {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#bill-description, #bill-amount, #bill-due-date {
+    width: calc(25% - 80px);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#reminders {
+    margin-top: 20px;
+}
+
+
+#monthly-budget {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-down {
+    animation: slideInDown 0.5s ease-in-out;
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.navbar .tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+.navbar .tab:hover {
+    background-color: #0056b3;
+}
+
+.navbar .tab.active {
+    background-color: #004999;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 1.0s ease;
+}
